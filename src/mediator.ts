@@ -145,7 +145,7 @@ function getDraggableInfo(draggableElement: HTMLElement): DraggableInfo {
       offsetWidth: draggableRect.right - draggableRect.left,
     },
     elementIndex: draggableIndex,
-    payload: container.getOptions().getChildPayload ? container.getOptions().getChildPayload!(draggableIndex) : undefined,
+    payload: container.getOptions().getChildPayload ? container.getOptions().getChildPayload!(draggableIndex, draggableElement.id) : undefined,
     targetElement: null,
     position: { x: 0, y: 0 },
     groupName: container.getOptions().groupName,
